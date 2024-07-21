@@ -1,0 +1,1 @@
+# Website made with HTML, CSS, JavaScript to keep a memory of places visited on the map.
