@@ -5,7 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: auto;
     margin: 0;
+    overflow: hidden;
 }
 
 #map-container {
@@ -15,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .map-layer {
@@ -23,7 +26,7 @@ body {
     height: 100%; /* Adjust as needed */
     transition: all 0.5s ease; /* Smooth transition for size change */
     cursor: pointer;
-    filter: brightness(70%); /* Dimmed state for non-focused maps */
+    filter: brightness(100%); /* Dimmed state for non-focused maps */
     pointer-events: visible; /* Prevent mouse events on the container */
 }
 
@@ -31,6 +34,27 @@ body {
     /* position: absolute; */
     width: auto;
     height: auto;
+}
+
+.pin {
+    fill: red; /* Pin color */
+    stroke: black; /* Pin border color */
+    stroke-width: 1px; /* Pin border width */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.pin:hover {
+    fill: yellow; /* Pin color on hover */
+}
+
+#southafrica-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
 }
 
 #india-container {
@@ -53,10 +77,64 @@ body {
     transition: all 0.5s ease;
 }
 
+#russia-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#switzerland-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#france-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#thailand-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#united-arab-emirates-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#usa-container{
+    width: auto; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
 .expanded {
     width: auto !important; /* Expand to fit most of the screen */
     height: auto !important;
-    z-index: 10;
+    z-index: 6;
     filter: brightness(100%); /* Focused map at normal brightness */
 }
 
@@ -66,7 +144,7 @@ body {
 
 .country-name {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(44, 44, 44, 0.8);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -76,11 +154,11 @@ body {
 }
 
 svg {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: block;
     fill: #cad1f5; /* Default color to white */
-    stroke: #000000;
+    stroke: #4f5053;
     stroke-width: 1;
     transition: filter 0.2s ease, stroke 0.3s ease;
 }
