@@ -7,7 +7,7 @@ body {
     height: 100vh;
     width: auto;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 #map-container {
@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .map-layer {
@@ -28,6 +28,7 @@ body {
     cursor: pointer;
     filter: brightness(100%); /* Dimmed state for non-focused maps */
     pointer-events: visible; /* Prevent mouse events on the container */
+    overflow: hidden;
 }
 
 #world {
@@ -154,7 +155,7 @@ body {
 }
 
 svg {
-    width: auto;
+    width: 100%;
     height: auto;
     display: block;
     fill: #cad1f5; /* Default color to white */
